@@ -2,12 +2,12 @@ import java.lang.Exception
 import kotlin.system.exitProcess
 
 class MathImpl : Math {
-    override fun getDoubleSum(a: Float, n: Int, b: Float, m: Int): Float {
+    override fun getDoubleSum(firstFloor: Float, firstCeil: Int, secondFloor: Float, secondCeil: Int): Float {
         val const = Constants.C
-        var i = a
-        var j = b
-        val counterN = if (n >= 0) n else exitProcess(1)
-        val counterM = if (m >= 0) m else exitProcess(1)
+        var i = firstFloor
+        var j = secondFloor
+        val counterN = if (firstCeil >= firstFloor) firstCeil else exitProcess(1)
+        val counterM = if (secondCeil >= secondFloor) secondCeil else exitProcess(1)
         var resultSum = 0f
         while (i <= counterN && j <= counterM) {
             val numerator = i + j

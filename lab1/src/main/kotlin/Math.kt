@@ -1,3 +1,3 @@
 fun interface Math {
-    fun getDoubleSum(a: Float, n: Int, b: Float, m: Int): Float
+    fun getDoubleSum(firstFloor: Float, firstCeil: Int, secondFloor: Float, secondCeil: Int): Float
 }
