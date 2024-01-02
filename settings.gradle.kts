@@ -13,3 +13,4 @@ rootProject.name = "kotlin-labs"
 include("lab1")
 include("lab2")
 include("lab3")
+include("lab4")

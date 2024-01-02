@@ -4,7 +4,12 @@ import exceptions.FloorMoreThanCeilException
 
 // C2 = 0(+) C3 = 2 C5 = 3(+) C7 = 5(float)
 class MathImpl : Math {
-    override fun getDoubleSum(firstFloor: Float, firstCeil: Int, secondFloor: Float, secondCeil: Int): Float {
+    override fun getDoubleSum(
+        firstFloor: Float,
+        firstCeil: Int,
+        secondFloor: Float,
+        secondCeil: Int,
+    ): Float {
         val const = Constants.C
         var iFloor = firstFloor
         var jFloor = secondFloor
@@ -17,7 +22,7 @@ class MathImpl : Math {
                 val denominator = i + const
                 if (denominator != 0f) {
                     resultSum += numerator / denominator
-                } else  {
+                } else {
                     throw DivisionByZeroException(resultSum)
                 }
             }
