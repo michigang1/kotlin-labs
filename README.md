@@ -12,11 +12,11 @@
     ```
 4. **Run the project** using the following command in the terminal:
     ```bash
-
+    gradle lab<lab_number>:runMain
     ```
 
 ```mermaid
 graph LR
 A{How ro run?} -- build --> B[gradle build]
-B -- run --> C[gradle bootRun]
+B -- run --> C[gradle lab<lab_number>:runMain]
 ```
