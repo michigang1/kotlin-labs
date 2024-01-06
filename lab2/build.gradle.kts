@@ -13,9 +13,20 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
+sourceSets {
+    main {
+        java.srcDir("src/main/kotlin")
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
 kotlin {
     jvmToolchain(17)
+}
+
+tasks.register<JavaExec>("runMain") {
+    setMain("AppKt")
+    classpath = sourceSets["main"].runtimeClasspath
 }
